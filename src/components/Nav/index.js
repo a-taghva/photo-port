@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
-function Nav(pops) {
+function Nav(props) {
   const {
     categories = [],
     setCurrentCategory,
     currentCategory
-  } = pops;
+  } = props;
 
   return (
     <header className="flex-row px-1">
