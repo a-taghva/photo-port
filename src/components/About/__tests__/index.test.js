@@ -15,4 +15,10 @@ describe('About componenet', () => {
   it('render', () => {
     render(<About/>);
   });
+
+  it('matches snapshot DOM node structure', () => {
+    const { asFragment } = render(<About />);
+
+    expect(asFragment()).toMatchSnapshot();
+  })
 })
