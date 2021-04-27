@@ -8,6 +8,7 @@ function App() {
     <div>
       <Nav></Nav>
       <main>
+        <Gallery></Gallery>
         <About></About>
       </main>
     </div>
