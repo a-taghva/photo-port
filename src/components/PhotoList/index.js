@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Photo from '../Photo';
 
 
-function PhotoList() {
+function PhotoList({ category }) {
   const [ photos ] = useState([
     {
       name: 'Grocery aisle',
@@ -120,10 +120,12 @@ function PhotoList() {
     },
   ]);
 
+  const currentPhotos = photos.filter(img => img.category === category)
+
   return(
     <div>
       <div className="flex-row">
-        {photos.map((img) => (
+        {currentPhotos.map((img) => (
           <Photo 
             img={img}
             key={img.name}
