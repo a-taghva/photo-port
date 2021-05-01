@@ -45,7 +45,10 @@ exports[`contact is rendering matches snapshot 1`] = `
         />
       </div>
       <button
+<<<<<<< HEAD
         data-testid="submitBtn"
+=======
+>>>>>>> 976bf17c480a9a8d50c0efae7f5cded052f1208d
         type="submit"
       >
         Submit
