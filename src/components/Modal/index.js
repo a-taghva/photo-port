@@ -1,8 +1,7 @@
 import React from 'react';
 
-function Modal(props) {
-  const { name, category, description, id } = props.currentPhoto;
-  console.log(name, category, description, id);
+function Modal({ currentPhoto, setIsModalOpen }) {
+  const { name, category, description, id } = currentPhoto;
 
   return(
     <div className="modalBackdrop">
@@ -10,7 +9,7 @@ function Modal(props) {
         <h3 className="modalTitle">{name}</h3>
         <img src={require(`../../assets/large/${category}/${id}.jpg`)} alt={category} />
         <p>{description}</p>
-        <button type="button">
+        <button type="button" onClick={() => setIsModalOpen(false)}>
           Close this modal
         </button>
       </div>
